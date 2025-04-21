@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>₪ㅤʟᴇᴠɪᴀᴛʜᴀɴ</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background-image: url('https://dl.dir.freefiremobile.com/common/web_event/official2.ff.garena.all/202210/217caa1f9379136315d0d3f801648b77.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: white;
+      min-height: 100vh;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    }
+
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .logo-button {
+      padding: 8px 15px;
+      background-color: transparent;
+      border: none;
+      color: white;
+      cursor: pointer;
+      font-size: 24px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .nav-category {
+      padding: 8px 15px;
+      background-color: transparent;
+      border: none;
+      color: white;
+      cursor: pointer;
+      font-size: 18px;
+      transition: all 0.3s ease;
+      position: relative;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav-category:hover {
+      color: #0ff;
+    }
+
+    .nav-category::after {
+      content: "⚡";
+      position: absolute;
+      right: -10px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 14px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .nav-category:hover::after {
+      opacity: 1;
+    }
+
+    .content {
+      padding: 50px;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.5);
+      margin: 50px;
+      border-radius: 10px;
+    }
+
+    .glitch {
+      position: relative;
+    }
+
+    .glitch::before, .glitch::after {
+      content: "₪ㅤʟᴇᴠɪᴀᴛʜᴀɴ";
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0.8;
+    }
+
+    .glitch::before {
+      color: #0ff;
+      z-index: -1;
+      animation: glitch-effect 3s infinite;
+    }
+
+    .glitch::after {
+      color: #f0f;
+      z-index: -2;
+      animation: glitch-effect 2s infinite reverse;
+    }
+
+    @keyframes glitch-effect {
+      0% { transform: translate(0); }
+      20% { transform: translate(-3px, 3px); }
+      40% { transform: translate(-3px, -3px); }
+      60% { transform: translate(3px, 3px); }
+      80% { transform: translate(3px, -3px); }
+      100% { transform: translate(0); }
+    }
+
+    .overview-icon, .member-icon {
+      width: 20px;
+      height: 20px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .overview-icon {
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14z"/><path d="M7 12h2v5H7zm4-7h2v12h-2zm4 5h2v7h-2z"/></svg>');
+    }
+
+    .member-icon {
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>');
+    }
+
+    .nav-category:hover .overview-icon {
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%230ff"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14z"/><path d="M7 12h2v5H7zm4-7h2v12h-2zm4 5h2v7h-2z"/></svg>');
+    }
+
+    .nav-category:hover .member-icon {
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%230ff"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>');
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <div class="nav-left">
+      <button class="logo-button glitch">₪ㅤʟᴇᴠɪᴀᴛʜᴀɴ</button>
+      <button class="nav-category" onclick="window.location.href='index.html'">
+        <span class="overview-icon"></span>
+        Overview
+      </button>
+      <button class="nav-category" onclick="window.location.href='member.html'">
+        <span class="member-icon"></span>
+        Members
+      </button>
+    </div>
+  </div>
+
+  <div class="content">
+    <h1>Welcome to ₪ㅤʟᴇᴠɪᴀᴛʜᴀɴ</h1>
+    <p>This is ₪ㅤʟᴇᴠɪᴀᴛʜᴀɴ Official Website</p>
+  </div>
+
+  <script>
+    // You can add additional JavaScript here if needed
+    document.addEventListener('DOMContentLoaded', function() {
+      if (!localStorage.getItem('visited')) {
+        localStorage.setItem('visited', 'true');
+      }
+    });
+  </script>
+</body>
+</html>
