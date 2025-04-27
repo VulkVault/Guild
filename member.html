@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>₪ㅤʟᴇᴠɪᴀᴛʜᴀɴ</title>
+  <title>₪ㅤʟᴇᴠɪᴀᴛʜᴀɴ - Members</title>
   <!-- Add Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
@@ -63,7 +63,7 @@
     }
 
     .nav-category:hover {
-      color: #aaa;
+      color: #0ff;
     }
 
     .nav-category::after {
@@ -81,8 +81,115 @@
       opacity: 1;
     }
 
-    /* Rest of your CSS remains the same */
-    /* ... */
+    .content {
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.5);
+      margin: 20px;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .members-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    .members-table th {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 12px;
+      text-align: left;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .members-table td {
+      padding: 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      font-weight: bold;
+    }
+
+    .members-table tr:hover {
+      background-color: rgba(255, 255, 255, 0.08);
+      transform: translateX(5px);
+      transition: all 0.2s ease;
+    }
+
+    /* Updated Color Scheme */
+    .leader-row {
+      color: #FFDBBB; /* Soft orange for leader */
+      text-shadow: 0 0 5px rgba(255, 219, 187, 0.5);
+    }
+
+    .co-leader-row {
+      color: #BADDFF; /* Light blue for co-leader */
+      text-shadow: 0 0 5px rgba(186, 221, 255, 0.5);
+    }
+
+    .elder-row {
+      color: #BAFFF5; /* Light cyan for elders */
+      text-shadow: 0 0 5px rgba(186, 255, 245, 0.5);
+    }
+
+    .member-row {
+      color: #FFFFFF; /* White for regular members */
+    }
+
+    /* Role icons */
+    .role-icon {
+      margin-right: 8px;
+    }
+
+    .leader-icon {
+      color: #FFDBBB;
+    }
+
+    .co-leader-icon {
+      color: #BADDFF;
+    }
+
+    .elder-icon {
+      color: #BAFFF5;
+    }
+
+    .member-icon {
+      color: #FFFFFF;
+    }
+
+    .glitch {
+      position: relative;
+    }
+
+    .glitch::before, .glitch::after {
+      content: "₪ㅤʟᴇᴠɪᴀᴛʜᴀɴ";
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0.8;
+    }
+
+    .glitch::before {
+      color: #0ff;
+      z-index: -1;
+      animation: glitch-effect 3s infinite;
+    }
+
+    .glitch::after {
+      color: #f0f;
+      z-index: -2;
+      animation: glitch-effect 2s infinite reverse;
+    }
+
+    @keyframes glitch-effect {
+      0% { transform: translate(0); }
+      20% { transform: translate(-3px, 3px); }
+      40% { transform: translate(-3px, -3px); }
+      60% { transform: translate(3px, 3px); }
+      80% { transform: translate(3px, -3px); }
+      100% { transform: translate(0); }
+    }
   </style>
 </head>
 <body>
@@ -101,7 +208,135 @@
     </div>
   </div>
 
-  <!-- Rest of your HTML remains the same -->
-  <!-- ... -->
+  <div class="content">
+    <h2><i class="fas fa-users"></i> Guild Members</h2>
+    <table class="members-table">
+      <thead>
+        <tr>
+          <th>Role</th>
+          <th>Username</th>
+          <th>UID</th>
+          <th>Level</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Leader -->
+        <tr class="leader-row">
+          <td><i class="fas fa-crown role-icon leader-icon"></i> Leader</td>
+          <td>₪ㅤ~ᴠᴜʟᴋx.</td>
+          <td>7895063833</td>
+          <td>50</td>
+        </tr>
+        
+        <!-- Co-Leader -->
+        <tr class="co-leader-row">
+          <td><i class="fas fa-star role-icon co-leader-icon"></i> Co-Leader</td>
+          <td>Roxze xzz !</td>
+          <td>5420450527</td>
+          <td>52</td>
+        </tr>
+        
+        <!-- Elders (4) -->
+        <tr class="elder-row">
+          <td><i class="fas fa-shield-alt role-icon elder-icon"></i> Elder</td>
+          <td>✓NOBITA亗ꔪ</td>
+          <td>7019054385</td>
+          <td>47</td>
+        </tr>
+        <tr class="elder-row">
+          <td><i class="fas fa-shield-alt role-icon elder-icon"></i> Elder</td>
+          <td>WRAITH</td>
+          <td>982346751</td>
+          <td>65</td>
+        </tr>
+        <tr class="elder-row">
+          <td><i class="fas fa-shield-alt role-icon elder-icon"></i> Elder</td>
+          <td>PHANTOM</td>
+          <td>123987456</td>
+          <td>62</td>
+        </tr>
+        <tr class="elder-row">
+          <td><i class="fas fa-shield-alt role-icon elder-icon"></i> Elder</td>
+          <td>REAPER</td>
+          <td>456123789</td>
+          <td>60</td>
+        </tr>
+        
+        <!-- Members (49) -->
+        <tr class="member-row">
+          <td><i class="fas fa-user role-icon member-icon"></i> Member</td>
+          <td>SPECTRE</td>
+          <td>789456123</td>
+          <td>58</td>
+        </tr>
+        <tr class="member-row">
+          <td><i class="fas fa-user role-icon member-icon"></i> Member</td>
+          <td>SHADOW</td>
+          <td>321654987</td>
+          <td>55</td>
+        </tr>
+        <tr class="member-row">
+          <td><i class="fas fa-user role-icon member-icon"></i> Member</td>
+          <td>RAVEN</td>
+          <td>654987321</td>
+          <td>53</td>
+        </tr>
+        <tr class="member-row">
+          <td><i class="fas fa-user role-icon member-icon"></i> Member</td>
+          <td>VIPER</td>
+          <td>987321654</td>
+          <td>52</td>
+        </tr>
+        <tr class="member-row">
+          <td><i class="fas fa-user role-icon member-icon"></i> Member</td>
+          <td>BANSHEE</td>
+          <td>159753486</td>
+          <td>50</td>
+        </tr>
+        <tr class="member-row">
+          <td><i class="fas fa-user role-icon member-icon"></i> Member</td>
+          <td>SABER</td>
+          <td>357159486</td>
+          <td>49</td>
+        </tr>
+        <tr class="member-row">
+          <td><i class="fas fa-user role-icon member-icon"></i> Member</td>
+          <td>FANG</td>
+          <td>486357159</td>
+          <td>48</td>
+        </tr>
+        <tr class="member-row">
+          <td><i class="fas fa-user role-icon member-icon"></i> Member</td>
+          <td>BLADE</td>
+          <td>753159486</td>
+          <td>47</td>
+        </tr>
+        <tr class="member-row">
+          <td><i class="fas fa-user role-icon member-icon"></i> Member</td>
+          <td>STRIKER</td>
+          <td>951753486</td>
+          <td>46</td>
+        </tr>
+        <tr class="member-row">
+          <td><i class="fas fa-user role-icon member-icon"></i> Member</td>
+          <td>HAWK</td>
+          <td>258369147</td>
+          <td>45</td>
+        </tr>
+        <!-- Additional members would go here -->
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // You can add any JavaScript functionality here
+      // For example, sorting or filtering members
+      
+      if (!localStorage.getItem('visited')) {
+        localStorage.setItem('visited', 'true');
+      }
+    });
+  </script>
 </body>
 </html>
