@@ -1,1 +1,295 @@
-as
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>₪ㅤʟᴇᴠɪᴀᴛʜᴀɴ</title>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background-image: url('https://dl.dir.freefiremobile.com/common/web_event/official2.ff.garena.all/202210/217caa1f9379136315d0d3f801648b77.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: white;
+      min-height: 100vh;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    }
+
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .logo-button {
+      padding: 8px 15px;
+      background-color: transparent;
+      border: none;
+      color: white;
+      cursor: pointer;
+      font-size: 24px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .nav-category {
+      padding: 8px 15px;
+      background-color: transparent;
+      border: none;
+      color: white;
+      cursor: pointer;
+      font-size: 18px;
+      transition: all 0.3s ease;
+      position: relative;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav-category:hover {
+      color: #0ff;
+    }
+
+    .nav-category::after {
+      content: "⚡";
+      position: absolute;
+      right: -10px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 14px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .nav-category:hover::after {
+      opacity: 1;
+    }
+
+    .content {
+      padding: 30px;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.5);
+      margin: 30px;
+      border-radius: 10px;
+    }
+
+    .glitch {
+      position: relative;
+      font-size: 4rem;
+      margin-bottom: 30px;
+    }
+
+    .glitch::before, .glitch::after {
+      content: "₪ㅤʟᴇᴠɪᴀᴛʜᴀɴ";
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0.8;
+    }
+
+    .glitch::before {
+      color: #0ff;
+      z-index: -1;
+      animation: glitch-effect 3s infinite;
+    }
+
+    .glitch::after {
+      color: #f0f;
+      z-index: -2;
+      animation: glitch-effect 2s infinite reverse;
+    }
+
+    @keyframes glitch-effect {
+      0% { transform: translate(0); }
+      20% { transform: translate(-3px, 3px); }
+      40% { transform: translate(-3px, -3px); }
+      60% { transform: translate(3px, 3px); }
+      80% { transform: translate(3px, -3px); }
+      100% { transform: translate(0); }
+    }
+
+    .leaderboard {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+
+    .leaderboard-item {
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
+      padding: 25px;
+      width: 220px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .leaderboard-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .position {
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .position-1 {
+      color: #FFD700; /* gold */
+    }
+
+    .position-2 {
+      color: #C0C0C0; /* silver */
+    }
+
+    .position-3 {
+      color: #CD7F32; /* bronze */
+    }
+
+    .player-avatar {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      margin: 0 auto 15px;
+      background: rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      color: white;
+    }
+
+    .player-name {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .player-points {
+      font-size: 1.4rem;
+      color: #0ff;
+      font-weight: bold;
+    }
+
+    .medal-icon {
+      font-size: 1.5rem;
+    }
+
+    .gold-icon {
+      color: #FFD700;
+    }
+
+    .silver-icon {
+      color: #C0C0C0;
+    }
+
+    .bronze-icon {
+      color: #CD7F32;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .leaderboard {
+        flex-direction: column;
+        align-items: center;
+      }
+      .leaderboard-item {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <div class="nav-left">
+      <button class="logo-button glitch">₪ㅤʟᴇᴠɪᴀᴛʜᴀɴ</button>
+      <button class="nav-category" onclick="window.location.href='index.html'">
+        <span class="overview-icon"></span>
+        Overview
+      </button>
+      <button class="nav-category" onclick="window.location.href='member.html'">
+        <span class="member-icon"></span>
+        Members
+      </button>
+      <button class="nav-category" onclick="window.location.href='status.html'">
+        <span class="status-icon"></span>
+        Status
+      </button>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="glitch">₪ㅤʟᴇᴠɪᴀᴛʜᴀɴ</div>
+    
+    <div class="leaderboard">
+      <!-- 1st Place -->
+      <div class="leaderboard-item">
+        <div class="position position-1">
+          <i class="fas fa-trophy gold-icon medal-icon"></i>
+          1st
+        </div>
+        <div class="player-avatar">
+          <i class="fas fa-crown gold-icon"></i>
+        </div>
+        <div class="player-name">₪ㅤ~ᴠᴜʟᴋx.</div>
+        <div class="player-points">1250 pts</div>
+      </div>
+      
+      <!-- 2nd Place -->
+      <div class="leaderboard-item">
+        <div class="position position-2">
+          <i class="fas fa-medal silver-icon medal-icon"></i>
+          2nd
+        </div>
+        <div class="player-avatar">
+          <i class="fas fa-star silver-icon"></i>
+        </div>
+        <div class="player-name">Roxze xzz !</div>
+        <div class="player-points">980 pts</div>
+      </div>
+      
+      <!-- 3rd Place -->
+      <div class="leaderboard-item">
+        <div class="position position-3">
+          <i class="fas fa-medal bronze-icon medal-icon"></i>
+          3rd
+        </div>
+        <div class="player-avatar">
+          <i class="fas fa-award bronze-icon"></i>
+        </div>
+        <div class="player-name">✓NOBITA亗ꔪ</div>
+        <div class="player-points">750 pts</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      if (!localStorage.getItem('visited')) {
+        localStorage.setItem('visited', 'true');
+      }
+    });
+  </script>
+</body>
+</html>
